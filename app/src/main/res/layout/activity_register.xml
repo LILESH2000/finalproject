@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:paddingTop="40dp"
+                android:layout_marginTop="55dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/hello"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_marginTop="55dp"
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/food_rice"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <EditText
+                android:id="@+id/register_user"
+                android:layout_width="364dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/email"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="10dp"
+                android:hint="Email"
+                android:textSize="16sp"
+                android:drawablePadding="18dp"
+                android:background="@drawable/inputstroke" />
+
+            <EditText
+                android:id="@+id/register_email"
+                android:layout_width="364dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/email"
+                android:layout_marginTop="15dp"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="10dp"
+                android:hint="Email"
+                android:textSize="16sp"
+                android:drawablePadding="18dp"
+                android:background="@drawable/inputstroke" />
+
+            <EditText
+                android:id="@+id/register_password"
+                android:layout_width="364dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/password"
+                android:layout_marginTop="15dp"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="10dp"
+                android:hint="Password"
+                android:textSize="16sp"
+                android:drawablePadding="18dp"
+                android:background="@drawable/inputstroke" />
+
+            <Button
+                android:id="@+id/register_button"
+                android:layout_width="364dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="10dp"
+                android:drawablePadding="18dp"
+                android:text="@string/sign_up"
+                android:textColor="@color/text"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="@drawable/btn_button" />
+
+            <TextView
+                android:id="@+id/login_btn"
+                android:layout_width="364dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Already have an account ? Log in"
+                android:textColor="@color/font"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
