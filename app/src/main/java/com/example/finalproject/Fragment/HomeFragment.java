@@ -2,8 +2,6 @@ package com.example.finalproject.Fragment;
 
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +11,7 @@ import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.finalproject.R;
+import com.example.finalproject.Utils.SpacingItemDecoder;
 import com.example.finalproject.databinding.FragmentHomeBinding;
 
 import java.util.ArrayList;
@@ -71,9 +70,13 @@ public class HomeFragment extends Fragment {
         binding = null; // मेमोरी लीक्स रोकने के लिए
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
+    private void initRecyclerView() {
+        recyclerView = binding.recycler;
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        SpacingItemDecoder itemDecoder = new SpacingItemDecoder(10);
+        recyclerView.addItemDecoration(itemDecoder);
+        foodAdapter = new MyAdapter(getContext(), foodList);
+        recyclerView.setAdapter(foodAdapter);
     }
+
 }
